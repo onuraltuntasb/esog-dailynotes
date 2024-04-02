@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="541dp" />
+
+    <EditText
+        android:id="@+id/edittxtProfilName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint=" Name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edittxtProfilPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Enter current Password"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edittxtProfilName"
+        app:layout_constraintStart_toStartOf="@+id/edittxtProfilName"
+        app:layout_constraintTop_toBottomOf="@+id/edittxtProfilName" />
+
+    <Button
+        android:id="@+id/btnProfileSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnPasswordSend"
+        app:layout_constraintTop_toTopOf="@+id/btnProfileUpdateMailPassword" />
+
+    <TextView
+        android:id="@+id/txtProfileEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Current Email"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/edittxtProfilPassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edittxtProfilPassword"
+        app:layout_constraintTop_toBottomOf="@+id/edittxtProfilPassword" />
+
+    <Button
+        android:id="@+id/btnProfileUpdateMailPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Mail/Pass Update"
+        app:layout_constraintEnd_toStartOf="@+id/btnPasswordSend"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtProfileEmail" />
+
+    <Button
+        android:id="@+id/btnPasswordSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Pass"
+        app:layout_constraintEnd_toStartOf="@+id/btnProfileSave"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnProfileUpdateMailPassword"
+        app:layout_constraintTop_toTopOf="@+id/btnProfileUpdateMailPassword" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imgProfilePicture"
+        app:layout_constraintEnd_toEndOf="@+id/imgProfilePicture"
+        app:layout_constraintStart_toStartOf="@+id/imgProfilePicture"
+        app:layout_constraintTop_toTopOf="@+id/imgProfilePicture" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/updateLayout"
+        android:layout_width="411dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="32dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnProfileUpdateMailPassword">
+
+        <EditText
+            android:id="@+id/edittxtNewEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="New Email"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/btnProfileMailUpdate"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edittxtNewPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="New Password"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/btnProfilePasswordUpdate"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittxtNewEmail" />
+
+        <Button
+            android:id="@+id/btnProfilePasswordUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pass Update"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/edittxtNewPassword"
+            app:layout_constraintTop_toTopOf="@+id/edittxtNewPassword" />
+
+        <Button
+            android:id="@+id/btnProfileMailUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mail Update"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/edittxtNewEmail"
+            app:layout_constraintTop_toTopOf="@+id/edittxtNewEmail" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imgProfilePicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edittxtProfilName"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+<!--    <Button-->
+<!--        android:id="@+id/btnNotPaylasActivityEdit"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Note Share"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnProfilDuzenleActivityEdit"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Profil"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/Chat"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/btnNotPaylasActivityEdit"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/Chat"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Chat"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
